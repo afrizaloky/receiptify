@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Receiptify</title>
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<body>
-		<div class="container">
-			<div id="login">
-				<h1>Receiptify</h1>
-				<h2>Spotify Top Track Generator</h2>
-				<a href="/login" class="login-btn">Log in with Spotify</a>
-				<p class="info">
-					This website was inspired by the Instagram account <a href="https://www.instagram.com/albumreceipts/">@albumreceipts</a>!</p>
-				</p>
-				<p class="info">
-					Made by <a href="https://michellexliu.github.io/">Michelle Liu</a>.</p>
-				</p>
-			</div>
-			<div id="loggedin">
-				<h1>Receiptify</h1>
-				<h2>Spotify Top Track Generator</h2>
-				<div id="options">
-					<button class="btn" id="short-term">Last Month</button>
-					<button class="btn" id="medium-term">Last 6 Months</button>
-					<button class="btn" id="long-term">All Time</button>
-				</div>
-				<div id="receipt"></div>
-			</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Receiptify</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div id="login">
+			<h1>Receiptify</h1>
+			<h2>Spotify Top Track Generator</h2>
+			<a href="/login" class="login-btn">Log in with Spotify</a>
+			<p class="info">
+				This website was inspired by the Instagram account <a
+					href="https://www.instagram.com/albumreceipts/">@albumreceipts</a>!</p>
+			</p>
+			<p class="info">
+				Made by <a href="https://michellexliu.github.io/">Michelle Liu</a>.</p>
+			</p>
 		</div>
-		<script id="user-profile-template" type="text/x-handlebars-template">
-			<div class='receiptContainer'>
+		<div id="loggedin">
+			<h1>Receiptify</h1>
+			<h2>Spotify Top Track Generator</h2>
+			<div id="options">
+				<button class="btn" id="short-term">Last Month</button>
+				<button class="btn" id="medium-term">Last 6 Months</button>
+				<button class="btn" id="long-term">All Time</button>
+			</div>
+			<div id="receipt"></div>
+		</div>
+	</div>
+	<script id="user-profile-template" type="text/x-handlebars-template">
+		<div class='receiptContainer'>
 				<h2 class='logo'>
 					RECEIPTIFY
 				</h2>
@@ -107,17 +110,18 @@
 					</p>
 					<img src='barcode.png' />
 					<p class="website">
-						receiptify.herokuapp.com
+						{{base_url}}
 					</p>
 				</div>
 			</div>
 			<button class="btn" id="download">Download Image</button>
 		</script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
-		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-		<script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-		<script src="dom-to-image.min.js"></script>
-		<script src="FileSaver.min.js"></script>
-		<script src="server.js"></script>
-	</body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<script src="dom-to-image.min.js"></script>
+	<script src="FileSaver.min.js"></script>
+	<script src="server.js"></script>
+</body>
+
 </html>
